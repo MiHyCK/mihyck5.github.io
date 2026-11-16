@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор стоимости заказа</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+  <main class="container min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="card shadow-sm border-0 w-100" style="max-width: 440px;">
+      <div class="card-body p-4">
+        <h1 class="h4 mb-4">Калькулятор стоимости заказа</h1>
+
+        <form id="order-form" novalidate>
+          <div class="mb-3">
+            <label for="product" class="form-label">Товар</label>
+            <select id="product" name="product" class="form-select">
+              <option value="150">Ручка — 150 ₽</option>
+              <option value="450">Блокнот — 450 ₽</option>
+              <option value="1200">Рюкзак — 1200 ₽</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="quantity" class="form-label">Количество</label>
+            <input id="quantity" name="quantity" type="text" class="form-control" placeholder="Введите количество" autocomplete="off">
+          </div>
+
+          <button id="calc-button" type="submit" class="btn btn-primary w-100">Посчитать стоимость</button>
+        </form>
+
+        <p id="error" class="text-danger small mt-3 mb-0" role="alert"></p>
+        <p id="result" class="fw-semibold mt-2 mb-0" aria-live="polite"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
